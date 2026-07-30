@@ -1,0 +1,450 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title data-i18n="meta.title">AI Capsule — All Your Web AI Tools in One Place</title>
+<meta name="description" data-i18n-attr="content" data-i18n="meta.description" content="One home for ChatGPT, Claude, Gemini and 60+ other web AI tools. Broadcast one prompt to several chats at once, chain prompts into automations, and keep everything organized in one workspace. For macOS &amp; Windows." />
+<meta name="theme-color" content="#0b0b0f" />
+
+<meta property="og:type" content="website" />
+<meta property="og:title" data-i18n-attr="content" data-i18n="meta.title" content="AI Capsule — All Your Web AI Tools in One Place" />
+<meta property="og:description" data-i18n-attr="content" data-i18n="meta.description" content="One home for ChatGPT, Claude, Gemini and 60+ other web AI tools — broadcast prompts, automate chains, stay organized." />
+<meta property="og:image" content="assets/img/og-image.jpg" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" data-i18n-attr="content" data-i18n="meta.title" content="AI Capsule" />
+<meta name="twitter:description" data-i18n-attr="content" data-i18n="meta.description" content="All your web AI tools in one place." />
+<meta name="twitter:image" content="assets/img/og-image.jpg" />
+
+<link rel="icon" href="assets/img/favicon-64.png" sizes="64x64" />
+<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png" />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<div class="bg-fx" aria-hidden="true"></div>
+<div class="bg-grid" aria-hidden="true"></div>
+
+<!-- ============ NAV ============ -->
+<nav class="nav" id="nav">
+  <div class="container nav-inner">
+    <a href="#top" class="brand">
+      <img src="assets/img/logo.png" alt="AI Capsule" width="28" height="28" />
+      <span>AI Capsule</span>
+    </a>
+
+    <div class="nav-links" id="navLinks">
+      <a href="#features" data-i18n="nav.features">Features</a>
+      <a href="#how" data-i18n="nav.how">How it works</a>
+      <a href="#faq" data-i18n="nav.faq">FAQ</a>
+      <a href="#download" data-i18n="nav.download">Download</a>
+    </div>
+
+    <div class="nav-right">
+      <div class="lang-switch" id="langSwitch">
+        <button class="lang-btn" id="langBtn" aria-haspopup="true" aria-expanded="false">
+          <span id="langFlag">🇬🇧</span>
+          <span id="langLabel">EN</span>
+        </button>
+        <div class="lang-menu" id="langMenu"></div>
+      </div>
+      <a href="#download" class="btn btn-primary" style="height:38px;padding:0 18px;font-size:13px;" data-i18n="nav.getApp">Download</a>
+      <button class="nav-burger" id="navBurger" aria-label="Menu">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<main id="top">
+
+  <!-- ============ HERO ============ -->
+  <header class="hero">
+    <div class="container">
+      <!-- <div class="hero-badge">
+        <span class="badge"><span class="dot"></span><span data-i18n="hero.badge">macOS &amp; Windows</span></span>
+      </div> -->
+
+      <h1>
+        <span data-i18n="hero.titleLead">All your web AI tools</span>
+        <span class="accent" data-i18n="hero.titleAccent">in one place.</span>
+      </h1>
+
+      <p class="hero-sub" data-i18n="hero.sub">Broadcast one prompt to ChatGPT, Claude, Gemini and more at once, chain them into automations, and keep every AI tool in one clean, organized space.</p>
+
+      <div class="hero-cta">
+        <a href="#download" class="btn btn-primary btn-lg" id="heroDownloadBtn">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><path d="m7 10 5 5 5-5"/><path d="M5 21h14"/></svg>
+          <span id="heroDownloadLabel" data-i18n="hero.ctaPrimary">Download for macOS</span>
+        </a>
+        <a href="#features" class="btn btn-secondary btn-lg" data-i18n="hero.ctaSecondary">See how it works</a>
+      </div>
+      <p class="hero-hint" data-i18n="hero.hint">No account required — download and go</p>
+
+      <div class="trust-row">
+        <span><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span data-i18n="trust.1">No API keys — uses your existing chat accounts</span></span>
+        <span><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span data-i18n="trust.2">Private by design — runs locally on your device</span></span>
+        <span><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span data-i18n="trust.3">macOS &amp; Windows</span></span>
+      </div>
+
+      <div class="hero-visual reveal">
+        <div class="hero-frame">
+          <img src="assets/screenshots/common-prompt.jpg" alt="AI Capsule: one prompt sent to ChatGPT, Gemini and Grok at once" loading="eager" />
+        </div>
+        <div class="hero-float hero-float-1">
+          <span class="icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 3 14h7l-1 8 10-12h-7l1-8Z"/></svg></span>
+          <span data-i18n="hero.float1">Sent to several chats at once</span>
+        </div>
+        <div class="hero-float hero-float-2">
+          <span class="icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>
+          <span data-i18n="hero.float2">All answered in seconds</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ============ PROBLEM ============ -->
+  <section class="problem">
+    <div class="container">
+      <div class="section-head reveal">
+        <div class="eyebrow" data-i18n="problem.eyebrow">Sound familiar?</div>
+        <h2 data-i18n="problem.title">Working with AI shouldn't feel like this</h2>
+      </div>
+      <div class="problem-grid">
+        <div class="problem-card reveal">
+          <span class="icon"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="9" x2="9" y2="20"/></svg></span>
+          <p data-i18n="problem.1">A dozen browser tabs open just to ask the same question to ChatGPT, Claude and Gemini</p>
+        </div>
+        <div class="problem-card reveal">
+          <span class="icon"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg></span>
+          <p data-i18n="problem.2">Copy-pasting the same prompt into every AI chat, one by one, comparing answers by hand</p>
+        </div>
+        <div class="problem-card reveal">
+          <span class="icon"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z"/><path d="M14 2v6h6"/></svg></span>
+          <p data-i18n="problem.3">Your best prompts scattered across notes apps, docs, and sticky notes — never where you need them</p>
+        </div>
+        <div class="problem-card reveal">
+          <span class="icon"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 2.1l4 4-4 4"/><path d="M3 12.2v-2a4 4 0 0 1 4-4h12.8"/><path d="M7 21.9l-4-4 4-4"/><path d="M21 11.8v2a4 4 0 0 1-4 4H4.2"/></svg></span>
+          <p data-i18n="problem.4">Multi-step AI workflows done manually: copy an answer, paste it as the next prompt, repeat</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PILLARS ============ -->
+  <section id="pillars">
+    <div class="container">
+      <div class="section-head reveal">
+        <h2 data-i18n="pillars.title">Built around two simple ideas</h2>
+      </div>
+      <div class="pillars">
+        <div class="pillar reveal">
+          <span class="icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg></span>
+          <h3 data-i18n="pillars.time.title">Save time</h3>
+          <p data-i18n="pillars.time.desc">Common Prompt sends one message to every open AI chat at once. Automation chains prompts across models — each answer feeds the next, automatically.</p>
+        </div>
+        <div class="pillar reveal">
+          <span class="icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="3"/><line x1="9" y1="3" x2="9" y2="21"/></svg></span>
+          <h3 data-i18n="pillars.convenience.title">Stay organized</h3>
+          <p data-i18n="pillars.convenience.desc">A dedicated, distraction-free browser just for AI — with workspaces, split-screen, a prompt library, and an archive, instead of a mess of tabs in your daily browser.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FEATURES ============ -->
+  <section id="features">
+    <div class="container">
+      <div class="section-head reveal">
+        <div class="eyebrow" data-i18n="features.eyebrow">Features</div>
+        <h2 data-i18n="features.title">Everything you need, nothing you don't</h2>
+        <p data-i18n="features.sub">Six ways AI Capsule turns a browser full of tabs into an AI workspace.</p>
+      </div>
+
+      <!-- Common Prompt -->
+      <div class="feature reveal">
+        <div class="feature-copy">
+          <div class="eyebrow" data-i18n="feature.cp.tag">Common Prompt</div>
+          <h3 data-i18n="feature.cp.title">Ask once. Every AI answers.</h3>
+          <p data-i18n="feature.cp.desc">Type a single message — with files attached, if you like — and send it to every open AI chat simultaneously. Watch ChatGPT, Claude, Gemini and Grok answer side by side, then compare and pick the best response. Tested with every supported chat, provided you're signed in and its message box and send button are visible on the page.</p>
+          <ul class="feature-points">
+            <li><span class="check"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span><span data-i18n="feature.cp.p1">Broadcasts to every open, supported AI chat in one click</span></li>
+            <li><span class="check"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span><span data-i18n="feature.cp.p2">Reuse saved prompts from your library with one click</span></li>
+            <li><span class="check"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span><span data-i18n="feature.cp.p3">See every answer at a glance in split-screen</span></li>
+          </ul>
+          <div class="supported-row">
+            <span class="supported-label" data-i18n="feature.cp.works">Works out of the box with</span>
+            <div class="supported-chips">
+              <span>ChatGPT</span><span>Claude</span><span>Gemini</span><span>Grok</span><span>Perplexity</span><span>Qwen</span><span>Copilot</span><span>Le Chat</span><span>DeepSeek</span>
+            </div>
+          </div>
+        </div>
+        <div class="feature-media">
+          <video muted loop playsinline preload="none" poster="assets/video/common-prompt-poster.jpg" data-src="assets/video/common-prompt.mp4"></video>
+          <span class="play-hint" data-i18n="media.watch">▶ Watch</span>
+        </div>
+      </div>
+
+      <!-- Automation -->
+      <div class="feature reverse reveal">
+        <div class="feature-copy">
+          <div class="eyebrow" data-i18n="feature.auto.tag">Automation</div>
+          <h3 data-i18n="feature.auto.title">Chain prompts into AI pipelines</h3>
+          <p data-i18n="feature.auto.desc">Build a sequence of steps across different AI models — the answer from each step is automatically added to the next prompt. Write hooks with one AI, turn them into a full script with another, and get an editing plan from a third — one click, zero copy-pasting. Tested with every supported chat, provided you're signed in and its message box and send button are visible on the page.</p>
+          <ul class="feature-points">
+            <li><span class="check"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span><span data-i18n="feature.auto.p1">Up to 20 steps, each pointed at any open AI chat</span></li>
+            <li><span class="check"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span><span data-i18n="feature.auto.p2">Every answer auto-feeds into the next prompt</span></li>
+            <li><span class="check"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span><span data-i18n="feature.auto.p3">Run the whole pipeline with one click, track progress live</span></li>
+          </ul>
+        </div>
+        <div class="feature-media">
+          <video muted loop playsinline preload="none" poster="assets/video/automation-poster.jpg" data-src="assets/video/automation.mp4"></video>
+          <span class="play-hint" data-i18n="media.watch">▶ Watch</span>
+        </div>
+      </div>
+
+      <!-- Workspaces -->
+      <div class="feature reveal">
+        <div class="feature-copy">
+          <div class="eyebrow" data-i18n="feature.ws.tag">Workspaces</div>
+          <h3 data-i18n="feature.ws.title">Split-screen your AI chats, or focus in tabs</h3>
+          <p data-i18n="feature.ws.desc">Group chats into workspaces for different projects or clients, switch between them instantly, and choose how you see them: side-by-side split view to watch every AI respond live, or a clean tabbed view when you want to focus on one.</p>
+          <ul class="feature-points">
+            <li><span class="check"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span><span data-i18n="feature.ws.p1">Unlimited workspaces, each with its own set of chats</span></li>
+            <li><span class="check"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span><span data-i18n="feature.ws.p2">Split-screen or tabs — switch anytime, drag to reorder</span></li>
+            <li><span class="check"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span><span data-i18n="feature.ws.p3">Pick from ready-made icons or emoji for every space</span></li>
+          </ul>
+        </div>
+        <div class="feature-media">
+          <img src="assets/screenshots/tabs-mode.jpg" alt="AI Capsule split-screen workspace with three AI chats" loading="lazy" />
+          <div class="mini-shot">
+            <img src="assets/screenshots/split-mode.jpg" alt="AI Capsule tabs view" loading="lazy" />
+            <span data-i18n="feature.ws.miniLabel">Tabs view</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- AI Store -->
+      <div class="feature reverse reveal">
+        <div class="feature-copy">
+          <div class="eyebrow" data-i18n="feature.store.tag">AI Store</div>
+          <h3 data-i18n="feature.store.title">60+ AI tools, one click away</h3>
+          <p data-i18n="feature.store.desc">A curated catalog of the best AI tools — chat, image, video, audio, code, design, research and more — organized by category. Open any of them straight into a workspace, and pin your favorites for instant access.</p>
+          <ul class="feature-points">
+            <li><span class="check"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span><span data-i18n="feature.store.p1">Curated, categorized catalog — no more googling "best AI for X"</span></li>
+            <li><span class="check"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span><span data-i18n="feature.store.p2">Favorite tools show up right on your new-tab screen</span></li>
+            <li><span class="check"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span><span data-i18n="feature.store.p3">Opens straight into a new tab or workspace</span></li>
+          </ul>
+        </div>
+        <div class="feature-media">
+          <img src="assets/screenshots/ai-store.jpg" alt="AI Capsule AI Store catalog of AI tools" loading="lazy" />
+        </div>
+      </div>
+
+      <!-- Prompt editor -->
+      <div class="feature reveal">
+        <div class="feature-copy">
+          <div class="eyebrow" data-i18n="feature.pe.tag">Prompt Library</div>
+          <h3 data-i18n="feature.pe.title">Your best prompts, organized and ready</h3>
+          <p data-i18n="feature.pe.desc">Save, edit and organize your prompts into folders. Pull any of them into the Common Prompt or an Automation step with one click — never dig through old chats for that perfect prompt again.</p>
+          <ul class="feature-points">
+            <li><span class="check"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span><span data-i18n="feature.pe.p1">Folders keep prompts organized by project or purpose</span></li>
+            <li><span class="check"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span><span data-i18n="feature.pe.p2">One click sends a saved prompt into Common Prompt or Automation</span></li>
+            <li><span class="check"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span><span data-i18n="feature.pe.p3">Everything stored locally, searchable instantly</span></li>
+          </ul>
+        </div>
+        <div class="feature-media">
+          <img src="assets/screenshots/prompt-editor.jpg" alt="AI Capsule prompt editor with folders" loading="lazy" />
+        </div>
+      </div>
+
+      <!-- Archive -->
+      <div class="feature reverse reveal">
+        <div class="feature-copy">
+          <div class="eyebrow" data-i18n="feature.arc.tag">Page Archive</div>
+          <h3 data-i18n="feature.arc.title">Save any AI conversation, for good</h3>
+          <p data-i18n="feature.arc.desc">One click saves a full, self-contained copy of any page — images, styles and all — so a great AI conversation is never lost to a deleted chat history. Come back to it anytime, even offline.</p>
+          <ul class="feature-points">
+            <li><span class="check"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span><span data-i18n="feature.arc.p1">Full offline copies — images and layout included</span></li>
+            <li><span class="check"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span><span data-i18n="feature.arc.p2">Searchable local archive, open anytime</span></li>
+            <li><span class="check"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span><span data-i18n="feature.arc.p3">Survives deleted chats and expired sessions</span></li>
+          </ul>
+        </div>
+        <div class="feature-media">
+          <img src="assets/screenshots/archive.jpg" alt="AI Capsule page archive" loading="lazy" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ MORE FEATURES GRID ============ -->
+  <section id="more">
+    <div class="container">
+      <div class="section-head reveal">
+        <h2 data-i18n="moreFeatures.title">And a lot more, out of the box</h2>
+        <p data-i18n="moreFeatures.sub">Small details that add up to a faster, calmer way of working with AI.</p>
+      </div>
+      <div class="grid-features">
+        <div class="gf-card reveal">
+          <span class="icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 3 14h7l-1 8 10-12h-7l1-8Z"/></svg></span>
+          <h4 data-i18n="mf.1.title">Fast Surf</h4>
+          <p data-i18n="mf.1.desc">A floating browser window for a quick look-up — opens on top of everything, tied to no workspace, and closes without disturbing what you were doing.</p>
+        </div>
+        <div class="gf-card reveal">
+          <span class="icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15 15 0 0 1 0 20 15 15 0 0 1 0-20Z"/></svg></span>
+          <h4 data-i18n="mf.2.title">10 languages</h4>
+          <p data-i18n="mf.2.desc">The interface speaks your language from the first launch — 10 languages, detected automatically or set by hand.</p>
+        </div>
+        <div class="gf-card reveal">
+          <span class="icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></span>
+          <h4 data-i18n="mf.5.title">Built-in proxy</h4>
+          <p data-i18n="mf.5.desc">Route traffic through your own proxy and reach region-locked AI tools — no system-wide setup needed.</p>
+        </div>
+        <div class="gf-card reveal">
+          <span class="icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="6" width="20" height="12" rx="2"/><path d="M6 10h.01M10 10h.01M14 10h.01M18 10h.01M6 14h12"/></svg></span>
+          <h4 data-i18n="mf.7.title">Keyboard-first</h4>
+          <p data-i18n="mf.7.desc">Shortcuts for everything — tabs, workspaces, automations — so your hands never leave the keyboard.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ HOW IT WORKS ============ -->
+  <section id="how">
+    <div class="container">
+      <div class="section-head reveal">
+        <div class="eyebrow" data-i18n="how.eyebrow">How it works</div>
+        <h2 data-i18n="how.title">From tab chaos to one click</h2>
+        <p data-i18n="how.sub">Get set up in under a minute.</p>
+      </div>
+      <div class="how-steps">
+        <div class="how-step reveal">
+          <div class="num">1</div>
+          <h4 data-i18n="how.1.title">Open your AI chats</h4>
+          <p data-i18n="how.1.desc">Add ChatGPT, Claude, Gemini or any of 60+ tools from the built-in store into a workspace, split-screen or tabs — your call.</p>
+        </div>
+        <div class="how-step reveal">
+          <div class="num">2</div>
+          <h4 data-i18n="how.2.title">Type once, or build a pipeline</h4>
+          <p data-i18n="how.2.desc">Send one prompt to every open chat with Common Prompt, or chain steps together with Automation.</p>
+        </div>
+        <div class="how-step reveal">
+          <div class="num">3</div>
+          <h4 data-i18n="how.3.title">Compare, save, move on</h4>
+          <p data-i18n="how.3.desc">Read every answer side by side, save the best prompts for later, and archive pages worth keeping.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ DOWNLOAD ============ -->
+  <section id="download">
+    <div class="container">
+      <div class="download reveal">
+        <h2 data-i18n="download.title">Get AI Capsule</h2>
+        <p data-i18n="download.sub">Available for macOS and Windows. No account required.</p>
+
+        <div class="download-cards">
+          <a class="dl-card" id="dlMac" href="https://github.com/DmitryKurdyukov/ai-capsule-releases/releases/download/v1.1.0/AI-Capsule-1.1.0-Mac.dmg" rel="noopener">
+            <span class="os-icon">
+              <svg width="30" height="30" viewBox="0 0 24 24" fill="currentColor"><path d="M16.365 1.43c0 1.14-.468 2.06-1.135 2.75-.735.76-1.945 1.36-3.075 1.27-.14-1.09.42-2.24 1.13-2.95.75-.76 2.02-1.32 3.08-1.07Zm3.9 16.6c-.53 1.22-.78 1.76-1.46 2.84-.95 1.5-2.29 3.37-3.95 3.39-1.47.02-1.85-.97-3.84-.96-1.99.01-2.41 1-3.88.98-1.66-.02-2.93-1.7-3.88-3.2-2.66-4.15-2.94-9.02-1.3-11.62 1.16-1.85 3-2.94 4.73-2.94 1.76 0 2.87 1 4.32 1 1.41 0 2.28-1 4.32-1 1.55 0 3.19.85 4.36 2.31-3.83 2.1-3.21 7.57.58 9.2Z"/></svg>
+            </span>
+            <span class="os-name" data-i18n="download.mac">macOS</span>
+            <span class="os-note" data-i18n="download.macNote">Apple Silicon &amp; Intel</span>
+            <span class="os-cta" data-i18n="download.get">Download<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></span>
+          </a>
+
+          <a class="dl-card" id="dlWin" href="https://github.com/DmitryKurdyukov/ai-capsule-releases/releases/download/v1.1.0/AI-Capsule-1.1.0-Windows-Setup.exe" rel="noopener">
+            <span class="os-icon">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor"><path d="M3 5.5 10.2 4.5v7.1H3V5.5Zm0 13L10.2 19.5v-7.1H3v6.1ZM11 4.4 21 3v8.6H11V4.4Zm0 8.9h10V21l-10-1.4v-6.3Z"/></svg>
+            </span>
+            <span class="os-name" data-i18n="download.win">Windows</span>
+            <span class="os-note" data-i18n="download.winNote">Windows 10 / 11</span>
+            <span class="os-cta" data-i18n="download.get">Download<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></span>
+          </a>
+        </div>
+
+        <p class="download-foot" data-i18n="download.foot">Auto-updates keep you on the newest version automatically.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FAQ ============ -->
+  <section id="faq">
+    <div class="container">
+      <div class="section-head reveal">
+        <h2 data-i18n="faq.title">Frequently asked questions</h2>
+      </div>
+      <div class="faq">
+        <details class="faq-item reveal" open>
+          <summary><span data-i18n="faq.q2">Do I need API keys or an extra subscription?</span><span class="plus"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></summary>
+          <div class="faq-answer" data-i18n="faq.a2">No. AI Capsule works with the AI chats you already use in your browser — ChatGPT, Claude, Gemini and more — through your existing accounts. There are no API keys to manage and no extra AI costs on top of what you already pay (or don't).</div>
+        </details>
+        <details class="faq-item reveal">
+          <summary><span data-i18n="faq.q3">Which AI chats does it support?</span><span class="plus"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></summary>
+          <div class="faq-answer" data-i18n="faq.a3">Common Prompt and Automation work with ChatGPT, Claude, Gemini, Grok, Perplexity, Qwen, Microsoft Copilot, Mistral's Le Chat and DeepSeek out of the box — plus 60+ more AI tools you can open in any workspace via the built-in AI Store.</div>
+        </details>
+        <details class="faq-item reveal">
+          <summary><span data-i18n="faq.q4">Is my data safe?</span><span class="plus"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></summary>
+          <div class="faq-answer" data-i18n="faq.a4">Your workspaces, prompts and archived pages are stored locally on your device. AI Capsule doesn't run its own servers or collect your conversations — you're simply using the official web apps of the AI tools you already trust, inside a more organized browser.</div>
+        </details>
+        <details class="faq-item reveal">
+          <summary><span data-i18n="faq.q5">Does it work offline?</span><span class="plus"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></summary>
+          <div class="faq-answer" data-i18n="faq.a5">Archived pages open fully offline. AI chats themselves still need an internet connection, same as using them in any regular browser.</div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FINAL CTA ============ -->
+  <section class="final-cta">
+    <div class="container">
+      <div class="reveal">
+        <h2 data-i18n="final.title">Stop copy-pasting between AI tabs.</h2>
+        <p data-i18n="final.sub">Download AI Capsule and get your first automation running in minutes.</p>
+        <div class="hero-cta">
+          <a href="#download" class="btn btn-primary btn-lg" id="finalDownloadBtn">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><path d="m7 10 5 5 5-5"/><path d="M5 21h14"/></svg>
+            <span id="finalDownloadLabel" data-i18n="hero.ctaPrimary">Download for macOS</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="#top" class="brand"><img src="assets/img/logo.png" alt="" width="28" height="28" /><span>AI Capsule</span></a>
+        <p data-i18n="footer.tagline">All your web AI tools in one place.</p>
+      </div>
+      <div class="footer-cols">
+        <div class="footer-col">
+          <h5 data-i18n="footer.product">Product</h5>
+          <a href="#features" data-i18n="nav.features">Features</a>
+          <a href="#how" data-i18n="nav.how">How it works</a>
+          <a href="#faq" data-i18n="nav.faq">FAQ</a>
+          <a href="#download" data-i18n="nav.download">Download</a>
+        </div>
+        <div class="footer-col">
+          <h5 data-i18n="footer.company">More</h5>
+          <a href="https://github.com/DmitryKurdyukov/ai-capsule-releases/releases" target="_blank" rel="noopener" data-i18n="footer.releases">Releases</a>
+          <a href="mailto:dimon9811208@gmail.com" data-i18n="footer.contact">Contact</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span id="year">2026</span> AI Capsule. <span data-i18n="footer.rights">All rights reserved.</span></span>
+      <span data-i18n="footer.madeWith">Made for people who live in AI chats.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="i18n.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
