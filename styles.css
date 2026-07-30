@@ -276,6 +276,8 @@ button {
   -webkit-backdrop-filter: blur(16px) saturate(140%);
   border-bottom: 1px solid transparent;
   transition: border-color 0.25s ease, background 0.25s ease;
+  transform: translateZ(0);
+  will-change: transform;
 }
 .nav.scrolled {
   border-bottom-color: var(--border);
@@ -599,8 +601,8 @@ section {
 }
 .problem-card {
   display: flex;
-  align-items: flex-start;
-  gap: 14px;
+  align-items: center;
+  gap: 16px;
   padding: 20px 22px;
   border-radius: var(--radius);
   background: var(--surface);
@@ -621,7 +623,6 @@ section {
   font-size: 14.5px;
   color: var(--text-secondary);
   line-height: 1.55;
-  padding-top: 4px;
 }
 .problem-card strong {
   color: var(--text);
@@ -861,6 +862,11 @@ section {
   gap: 14px;
 }
 .gf-card {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-areas: "icon title" "desc desc";
+  column-gap: 14px;
+  row-gap: 14px;
   padding: 22px;
   border-radius: var(--radius);
   background: var(--surface);
@@ -873,6 +879,8 @@ section {
   transform: translateY(-2px);
 }
 .gf-card .icon {
+  grid-area: icon;
+  align-self: center;
   width: 36px;
   height: 36px;
   border-radius: 10px;
@@ -881,14 +889,17 @@ section {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 14px;
 }
 .gf-card h4 {
-  font-size: 14.5px;
-  font-weight: 650;
-  margin-bottom: 6px;
+  grid-area: title;
+  align-self: center;
+  font-size: 19px;
+  font-weight: 700;
+  line-height: 1.3;
+  text-align: left;
 }
 .gf-card p {
+  grid-area: desc;
   font-size: 12.8px;
   color: var(--text-secondary);
   line-height: 1.55;
@@ -1016,10 +1027,12 @@ section {
   color: var(--text);
 }
 .dl-card .os-name {
+  margin-top: -18px;
   font-size: 15px;
   font-weight: 700;
 }
 .dl-card .os-note {
+  margin-top: -10px;
   font-size: 12px;
   color: var(--text-faint);
 }
@@ -1027,10 +1040,19 @@ section {
   margin-top: 6px;
   font-size: 12.5px;
   font-weight: 700;
-  color: var(--accent);
+  color: #fff;
   display: inline-flex;
   align-items: center;
-  gap: 4px;
+  gap: 5px;
+  padding: 9px 20px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, var(--accent) 0%, #6f5df0 100%);
+  box-shadow: var(--shadow-glow);
+  transition: transform 0.18s var(--ease), background 0.18s var(--ease), box-shadow 0.18s var(--ease);
+}
+.dl-card:hover .os-cta {
+  background: linear-gradient(135deg, var(--accent-hover) 0%, #7d6bf5 100%);
+  transform: translateY(-1px);
 }
 .download-foot {
   margin-top: 30px;
@@ -1183,6 +1205,9 @@ footer {
 /* ---------- Responsive nav / misc ---------- */
 
 @media (max-width: 860px) {
+  .nav-inner {
+    justify-content: space-between;
+  }
   .nav-links {
     position: fixed;
     top: 66px;

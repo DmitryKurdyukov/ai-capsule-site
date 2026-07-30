@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://dmitrykurdyukov.github.io/ai-capsule-site/sitemap.xml

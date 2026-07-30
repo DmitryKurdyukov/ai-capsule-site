@@ -128,12 +128,28 @@
     var yearEl = document.getElementById('year');
     if (yearEl) yearEl.textContent = String(new Date().getFullYear());
 
-    // nav scroll state
+    // nav scroll state (hysteresis to avoid flicker when scrollY hovers near the threshold)
     var nav = document.getElementById('nav');
-    var onScroll = function () {
-      if (nav) nav.classList.toggle('scrolled', window.scrollY > 8);
+    var navScrolled = false;
+    var scrollTicking = false;
+    var applyScrollState = function () {
+      scrollTicking = false;
+      if (!nav) return;
+      var y = window.scrollY;
+      if (!navScrolled && y > 24) {
+        navScrolled = true;
+        nav.classList.add('scrolled');
+      } else if (navScrolled && y < 8) {
+        navScrolled = false;
+        nav.classList.remove('scrolled');
+      }
     };
-    onScroll();
+    var onScroll = function () {
+      if (scrollTicking) return;
+      scrollTicking = true;
+      window.requestAnimationFrame(applyScrollState);
+    };
+    applyScrollState();
     window.addEventListener('scroll', onScroll, { passive: true });
 
     // mobile nav burger
